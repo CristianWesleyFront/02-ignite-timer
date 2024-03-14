@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const HistoryContainer = styled.div`
+export const HistoryContainer = styled.main`
   flex: 1;
   padding: 3.5rem;
 
@@ -12,9 +12,11 @@ export const HistoryContainer = styled.div`
     color: ${(props) => props.theme['gray-100']};
   }
 `
+
 export const HistoryList = styled.div`
   flex: 1;
   overflow: auto;
+  margin-top: 2rem;
 
   table {
     width: 100%;
@@ -79,7 +81,6 @@ export const Status = styled.span<StatusProps>`
     width: 0.5rem;
     height: 0.5rem;
     border-radius: 9999px;
-    background-color: ${(props) =>
-      props.theme[STATUS_COLORS[props.statusColor]]};
+    background: ${(props) => props.theme[STATUS_COLORS[props.statusColor]]};
   }
 `
